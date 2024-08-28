@@ -1,11 +1,11 @@
 steps:
   - name: 'gcr.io/cloud-builders/docker'
-    args: ['build', '-t', 'gcr.io/directed-radius-429205-j0/cloud-run-blue-screen', '.']
+    args: ['build', '-t', 'gcr.io/augmented-pager-426207-v6/cloud-run-blue-screen', '.']
   - name: 'gcr.io/cloud-builders/docker'
-    args: ['push', 'gcr.io/directed-radius-429205-j0/cloud-run-blue-screen']
+    args: ['push', 'gcr.io/augmented-pager-426207-v6/cloud-run-blue-screen']
   - name: 'gcr.io/cloud-builders/gcloud'
-    args: ['run', 'deploy', 'blue-screen-app', '--image', 'gcr.io/directed-radius-429205-j0/cloud-run-blue-screen', '--platform', 'managed', '--region', 'us-central1', '--allow-unauthenticated']
+    args: ['run', 'deploy', 'blue-screen-app', '--image', 'gcr.io/augmented-pager-426207-v6/cloud-run-blue-screen', '--platform', 'managed', '--region', 'us-central1', '--allow-unauthenticated']
 options:
   defaultLogsBucketBehavior: REGIONAL_USER_OWNED_BUCKET
 images:
-  - 'gcr.io/directed-radius-429205-j0/cloud-run-blue-screen'
+  - 'gcr.io/augmented-pager-426207-v6/cloud-run-blue-screen'
